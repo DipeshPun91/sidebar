@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #11121a;
+  color: #e6e6ef;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: #11121a;
+  border-right: 1px solid #42434a;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+}
+
+.sidebar.close {
+  padding: 5px;
+  width: 60px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Sidebar Item Styles */
+.sidebar > ul > li:first-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.sidebar ul li:nth-child(6) {
+  margin-bottom: 5rem;
+}
+
+.sidebar ul li:nth-child(7) {
+  border-top: 2px solid #00ff99;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sidebar ul li:last-child {
+  margin-top: auto;
+}
+
+/* Logo Styles */
+.sidebar .logo {
+  font-weight: 600;
+  color: #00ff99;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar .logo svg {
+  fill: #00ff99;
+  margin-right: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+.logo-container svg {
+  fill: #00ff99;
+}
+
+/* Sidebar Links and Buttons */
+.sidebar ul li.active a {
+  color: #00ff99;
+  background-color: #222533;
+  border: 2px solid #00ff99;
+}
+
+.sidebar a,
+.sidebar .dropdown-btn,
+.sidebar .logo {
+  border-radius: 0.5em;
+  padding: 0.85em;
+  text-decoration: none;
+  color: #e6e6ef;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sidebar svg {
+  flex-shrink: 0;
+  fill: #00ff99;
+}
+
+.sidebar a span,
+.sidebar .dropdown-btn span {
+  flex-grow: 2;
+}
+
+.sidebar a:hover,
+.sidebar .dropdown-btn:hover {
+  background-color: #222533;
+  border: 2px solid #00ff99;
+}
+
+/* Dropdown and Sub-menu */
+.sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+}
+
+.sidebar div {
+  overflow: hidden;
+}
+
+.sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-btn svg {
+  transition: 200ms ease;
+}
+
+.rotate svg:last-child {
+  rotate: 180deg;
+}
+
+.sidebar .sub-menu a {
+  padding-left: 2em;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  margin-left: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 0.5em;
+  background: none;
+  cursor: pointer;
+}
+
+.toggle-btn svg {
+  transition: rotate 150ms ease;
+}
+
+.toggle-btn:hover {
+  background-color: #222533;
+  border: 2px solid #00ff99;
+}
+
+/* Main Content Styles */
+.container {
+  padding: 20px;
+}
