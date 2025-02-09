@@ -111,7 +111,7 @@ body {
   color: #e6e6ef;
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
 }
 
 .dropdown-btn {
